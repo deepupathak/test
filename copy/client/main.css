@@ -1,0 +1,6 @@
+/* CSS declarations go here */
+.CopyText {
+	left: -2000px;
+	opacity: 0;
+	position: absolute;
+}
