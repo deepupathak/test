@@ -42,8 +42,6 @@ export default class App extends Component {
             	$('#log').text('Copy failed !');
             }
           }
-        }else if(res == false){
-          alert('Email ID already exists');
         }
       }
     });
