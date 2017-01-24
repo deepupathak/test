@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
  
 // App component - represents the whole app
 export default class App extends Component {
+	componentDidUpdate(){
+		$('[data-toggle="tooltip"]').tooltip();
+	}
 	copyTextModal(event){
 		event.preventDefault();
 
@@ -64,10 +67,8 @@ export default class App extends Component {
 			<div>
 				<form className="well">
 					<h3>Copy To Clipboard</h3>
-					<div className="submit-button">
-						<div className="form-group">
-							<button type="button" className="btn btn-default form-control copyButton" onClick={this.copyTextModal.bind(this)}>Copy text</button><br />
-						</div>
+					<div className="form-group">
+						<button type="button" className="btn btn-default form-control" onClick={this.copyTextModal.bind(this)}>Copy text</button><br />
 					</div>
 				</form>
 				<div>
@@ -88,7 +89,7 @@ export default class App extends Component {
 												</button>
 											</div>
 										</div>
-										<p id="log"></p>
+										<p id="log"><br /></p>
 									</form>
 								</div>
 								<div className="modal-footer">
